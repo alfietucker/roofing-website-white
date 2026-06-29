@@ -117,7 +117,7 @@ var IMAGES = {
     'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80'
   ]
 };
-var FALLBACK = '#b29572';
+var FALLBACK = '#5c6b54';
 
 function setBg(el, url) {
   var probe = new Image();
