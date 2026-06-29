@@ -1,0 +1,308 @@
+/* ============================================================
+   Perth Carpentry Specialists — recreation
+   Palette + type tokens
+   ============================================================ */
+:root{
+  --white:#ffffff;
+  --ink:#454545;          /* body copy */
+  --ink-soft:#6f6f6f;     /* muted copy */
+  --heading:#3f3f3f;      /* light headings */
+  --charcoal:#2c2a27;     /* dark sections / footer */
+  --charcoal-2:#262420;
+  --line:#e2e2e2;
+  --mb-orange:#e9681d;    /* master builders */
+  --btn-dark:#262421;
+  --container:1080px;
+  --space:96px;           /* section vertical rhythm */
+  font-synthesis:none;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"Montserrat",-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  font-weight:300;
+  color:var(--ink);
+  line-height:1.75;
+  font-size:15px;
+  letter-spacing:.2px;
+  -webkit-font-smoothing:antialiased;
+  background:var(--white);
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+
+.container{
+  width:100%;
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 28px;
+}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-block;
+  font-size:11px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  font-weight:400;
+  padding:16px 30px;
+  border:1px solid transparent;
+  transition:.25s ease;
+  cursor:pointer;
+  line-height:1;
+}
+.btn-outline{
+  color:#fff;border-color:rgba(255,255,255,.85);background:transparent;
+}
+.btn-outline:hover{background:#fff;color:#2c2a27;}
+.btn-dark{
+  background:var(--btn-dark);color:#fff;border-color:var(--btn-dark);
+}
+.btn-dark:hover{background:#000;border-color:#000;}
+.btn-outline-dark{
+  background:transparent;color:#3f3f3f;border-color:#bdbdbd;
+}
+.btn-outline-dark:hover{background:#2c2a27;color:#fff;border-color:#2c2a27;}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:#fff;
+  border-bottom:1px solid #efefef;
+}
+.header-inner{
+  max-width:1180px;margin:0 auto;
+  padding:16px 28px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.brand-badge{display:block;width:48px;height:48px;}
+.main-nav{display:flex;align-items:center;gap:34px;}
+.main-nav ul{
+  display:flex;gap:30px;list-style:none;margin:0;padding:0;
+}
+.main-nav a{
+  font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;
+  color:#4a4a4a;font-weight:400;transition:.2s;
+}
+.main-nav a:hover{color:#000;}
+.social{display:flex;gap:9px;}
+.soc-ic{
+  width:24px;height:24px;border-radius:50%;
+  border:1px solid #cfcfcf;color:#5a5a5a;
+  display:flex;align-items:center;justify-content:center;transition:.2s;
+}
+.soc-ic:hover{background:#2c2a27;border-color:#2c2a27;color:#fff;}
+
+.nav-toggle{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:0;cursor:pointer;padding:6px;
+}
+.nav-toggle span{width:24px;height:2px;background:#2c2a27;display:block;}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;min-height:560px;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  background:#3a352f center/cover no-repeat;
+}
+.hero-overlay{position:absolute;inset:0;background:rgba(28,26,23,.42);}
+.hero-content{position:relative;z-index:2;padding:40px 20px;}
+.hero h1{
+  color:#fff;font-weight:200;
+  font-size:46px;letter-spacing:1px;line-height:1.2;
+  margin:0 0 34px;
+}
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+.intro{padding:var(--space) 0;}
+.intro-grid{
+  display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:start;
+}
+.intro-head h2{
+  font-weight:300;color:var(--heading);
+  font-size:27px;line-height:1.45;margin:0;letter-spacing:.3px;
+}
+.intro-body p{margin:0 0 30px;color:var(--ink);}
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.services{padding:0 0 var(--space);}
+.service-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:42px;
+}
+.service-img{
+  width:100%;aspect-ratio:16/11;background:#cbb89f center/cover no-repeat;
+  margin-bottom:26px;
+}
+.service h3{
+  font-size:12px;letter-spacing:1.8px;text-transform:uppercase;
+  font-weight:500;color:#3f3f3f;text-align:center;
+  margin:0 0 18px;line-height:1.7;
+}
+.service p{font-size:13.5px;color:var(--ink-soft);text-align:center;margin:0;line-height:1.85;}
+
+.mb-badge{display:flex;justify-content:center;margin-top:72px;}
+.mb-logo{
+  display:inline-flex;flex-direction:column;align-items:center;
+}
+.mb-mark{
+  background:var(--mb-orange);width:54px;height:54px;border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+}
+.mb-text{
+  background:var(--mb-orange);color:#fff;font-weight:700;font-size:13px;
+  letter-spacing:.5px;line-height:1.05;text-align:center;
+  padding:8px 14px;margin-top:-2px;
+}
+.mb-member{
+  background:#3f3f3f;color:#fff;font-size:11px;letter-spacing:1px;
+  padding:4px 22px;text-transform:lowercase;font-weight:400;
+}
+
+/* ============================================================
+   QUOTE / TESTIMONIAL
+   ============================================================ */
+.quote{
+  position:relative;background:#2c2a27 center/cover no-repeat;
+  padding:120px 0;text-align:center;
+}
+.quote-overlay{position:absolute;inset:0;background:rgba(26,24,21,.62);}
+.quote-content{position:relative;z-index:2;}
+.quote blockquote{
+  margin:0 auto 20px;max-width:760px;
+  color:#f3f1ee;font-style:italic;font-weight:300;
+  font-size:24px;line-height:1.5;
+}
+.quote cite{
+  color:#e9e6e1;font-style:italic;font-weight:300;font-size:15px;
+}
+
+/* ============================================================
+   FINANCE / PULP
+   ============================================================ */
+.finance{padding:var(--space) 0;text-align:center;}
+.finance-inner{max-width:660px;}
+.pulp-logo{margin-bottom:26px;line-height:1;}
+.pulp-word{
+  font-size:46px;font-weight:400;letter-spacing:1px;color:#3a3a3a;
+  font-family:Georgia,"Times New Roman",serif;
+}
+.pulp-sub{
+  display:block;font-size:9px;letter-spacing:6px;color:#9a8fc0;
+  margin-top:4px;font-weight:500;
+}
+.finance p{
+  font-size:21px;font-weight:300;color:#4a4a4a;line-height:1.6;
+  margin:0 auto 34px;max-width:560px;
+}
+
+/* ============================================================
+   FEATURES
+   ============================================================ */
+.features{
+  position:relative;background:#1f1d1a center/cover no-repeat;
+  padding:110px 0;
+}
+.features-overlay{position:absolute;inset:0;background:rgba(24,22,19,.7);}
+.feature-grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:36px;text-align:center;
+}
+.feature-ic{
+  width:78px;height:78px;border-radius:50%;border:1px solid rgba(255,255,255,.55);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 26px;
+}
+.feature h4{
+  color:#fff;font-size:12px;letter-spacing:2px;text-transform:uppercase;
+  font-weight:500;margin:0 0 16px;
+}
+.feature p{color:#cfcac3;font-size:13px;line-height:1.8;margin:0;}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact{padding:var(--space) 0;}
+.contact-inner{max-width:620px;text-align:center;}
+.contact h2{
+  font-weight:300;color:var(--heading);font-size:34px;margin:0 0 22px;letter-spacing:.5px;
+}
+.contact-lead{font-size:13px;color:var(--ink-soft);margin:0 0 46px;}
+.contact-lead strong{color:#3f3f3f;font-weight:500;}
+
+.contact-form{text-align:left;}
+.field{border:0;margin:0 0 26px;padding:0;}
+.field-label{
+  display:block;font-size:12px;color:#5a5a5a;margin-bottom:8px;font-weight:400;
+}
+.opt{color:#b3b3b3;font-size:11px;}
+.contact-form input,
+.contact-form textarea{
+  width:100%;border:1px solid #d9d9d9;background:#fdfdfd;
+  padding:13px 14px;font-family:inherit;font-size:14px;color:#3f3f3f;
+  border-radius:0;transition:.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{outline:none;border-color:#9a9a9a;}
+.contact-form textarea{resize:vertical;}
+.name-row{display:flex;gap:18px;}
+.name-cell{flex:1;}
+.name-cell small{display:block;font-size:11px;color:#9a9a9a;margin-top:7px;}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer{background:var(--charcoal);color:#d7d3cd;}
+.footer-mb{
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  padding:64px 20px 10px;text-align:center;
+}
+.mb-mark-lg{background:transparent;width:auto;height:auto;}
+.footer-mb-text{
+  color:#fff;font-weight:700;font-size:18px;letter-spacing:1px;
+  display:flex;flex-direction:column;line-height:1.1;
+}
+.footer-mb-text small{font-size:9px;letter-spacing:4px;font-weight:400;color:#bdbab4;margin-top:3px;}
+.footer-cta{
+  display:flex;align-items:center;justify-content:space-between;gap:30px;
+  padding-top:46px;padding-bottom:46px;
+  border-top:1px solid rgba(255,255,255,.1);margin-top:40px;
+}
+.footer-cta h3{font-weight:300;font-size:22px;color:#f0eeea;margin:0;letter-spacing:.3px;}
+.footer-credit{
+  text-align:left;max-width:var(--container);margin:0 auto;
+  padding:0 28px 40px;font-size:11px;color:#8d8a85;letter-spacing:.5px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:860px){
+  :root{--space:64px;}
+  .nav-toggle{display:flex;}
+  .main-nav{
+    position:absolute;top:100%;left:0;right:0;background:#fff;
+    flex-direction:column;gap:18px;padding:24px 28px;
+    border-bottom:1px solid #eee;display:none;
+  }
+  .main-nav.open{display:flex;}
+  .main-nav ul{flex-direction:column;gap:18px;}
+  .intro-grid{grid-template-columns:1fr;gap:30px;}
+  .service-grid{grid-template-columns:1fr;gap:50px;}
+  .feature-grid{grid-template-columns:repeat(2,1fr);gap:44px;}
+  .hero h1{font-size:34px;}
+  .footer-cta{flex-direction:column;text-align:center;}
+}
+@media (max-width:520px){
+  .feature-grid{grid-template-columns:1fr;}
+  .name-row{flex-direction:column;gap:26px;}
+  .hero h1{font-size:28px;}
+}
